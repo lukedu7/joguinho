@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca Bíblica</title>
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #E6E6FA;
+        }
+        #forca {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+            margin-bottom: 20px;
+        }
+        #palavra {
+            font-size: 2em;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+        #dicas {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #letras {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 500px;
+        }
+        .letra {
+            margin: 5px;
+            padding: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #FFB347;
+            border: none;
+            border-radius: 5px;
+        }
+        .letra:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #mensagem {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1em;
+            color: #FFF;
+            background-color: #4B0082;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo da Forca Bíblica</h1>
+    <canvas id="forca" width="300" height="300"></canvas>
+    <div id="palavra"></div>
+    <div id="dicas"></div>
+    <div id="letras"></div>
+    <div id="mensagem"></div>
+    <button id="iniciarJogo" class="btn">Iniciar Novo Jogo</button>
+    <a href="001.index.html" class="btn">Voltar ao Menu</a>
+    
+    <script src="014.forca.js"></script>
+    <script>
+        document.getElementById('iniciarJogo').addEventListener('click', iniciarJogo);
+    </script>
+</body>
+</html>
